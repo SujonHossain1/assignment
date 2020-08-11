@@ -29,9 +29,9 @@ function brickCalculator(floor) {
         if (floor <= 10) {
             totalBrick = totalBrick + (floor * 15 * 1000);
         } else if (floor <= 20) {
-            totalBrick = (totalBrick + ((floor - 10) * 12 * 1000)) + (totalBrick + (10 * 15 * 1000));
+            totalBrick = totalBrick + ((floor - 10) * 12 * 1000) + (10 * 15 * 1000);
         } else if (floor >= 21) {
-            totalBrick = (totalBrick + ((floor - 20) * 10 * 1000)) + (totalBrick + (10 * 12 * 1000)) + (totalBrick + (10 * 15 * 1000));
+            totalBrick = totalBrick + ((floor - 20) * 10 * 1000) + (10 * 12 * 1000) + (10 * 15 * 1000);
         }
     }
 
@@ -40,14 +40,14 @@ function brickCalculator(floor) {
 
 //tiny Friend function
 
-function tinyFriend(friends){
+function tinyFriend(friends) {
     let tinyFriendName = friends[0];
 
     for (let i = 0; i < friends.length; i++) {
         let currentLength = friends[i].length;
-       if(currentLength < tinyFriendName.length){
-           tinyFriendName = friends[i];
-       }
+        if (currentLength < tinyFriendName.length) {
+            tinyFriendName = friends[i];
+        }
     }
 
     return tinyFriendName;
@@ -55,12 +55,8 @@ function tinyFriend(friends){
 
 
 
-
-
-
-
-
-
+let result = brickCalculator(20)
+console.log(result)
 
 
 
